@@ -3,10 +3,13 @@ package com.picpay.desafio.android
 import android.os.Bundle
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.picpay.desafio.android.databinding.ActivityMainBinding
+import com.picpay.desafio.android.presentation.userlist.UserListFragment
 import com.picpay.desafio.android.presentation.userlist.adapter.UserListAdapter
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
@@ -26,6 +29,12 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         setContentView(binding.root)
         setSupportActionBar(binding.userListToolbar)
         supportActionBar
+
+        val userListFragment = UserListFragment()
+        val fragmentManager: FragmentManager = supportFragmentManager
+        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.user_list_fragment_container, userListFragment).commit()
+
 //        setupActionBarWithNavController(navController)
     }
 
