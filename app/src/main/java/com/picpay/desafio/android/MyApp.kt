@@ -1,6 +1,7 @@
 package com.picpay.desafio.android
 
 import android.app.Application
+import com.picpay.desafio.android.di.userListModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -14,7 +15,7 @@ class MyApp: Application() {
             androidLogger()
             androidContext(this@MyApp)
 
-//            modules()
+            modules(userListModule)
         }
     }
 }
