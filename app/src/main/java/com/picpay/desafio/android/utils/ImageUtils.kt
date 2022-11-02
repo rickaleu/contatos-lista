@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.ImageView
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.picpay.desafio.android.R
 
 private const val STROKE_WIDTH = 5f
@@ -15,7 +16,8 @@ fun loadImage(target: ImageView, url: String?) {
         .with(target.context)
         .load(url)
         .placeholder(R.drawable.ic_round_account_circle)
-        .error(R.drawable.ic_launcher_foreground)
+        .error(R.drawable.ic_baseline_error_24)
+        .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
         .into(target)
 }
 

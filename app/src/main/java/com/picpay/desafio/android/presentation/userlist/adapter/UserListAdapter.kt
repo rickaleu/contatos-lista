@@ -2,7 +2,9 @@ package com.picpay.desafio.android.presentation.userlist.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.picpay.desafio.android.R
 import com.picpay.desafio.android.databinding.ListItemUserBinding
 import com.picpay.desafio.android.domain.User
 import com.picpay.desafio.android.utils.loadImage
@@ -21,8 +23,8 @@ class UserListAdapter(private val userList: List<User>) :
 
     override fun getItemCount() = userList.count()
 
-    class UserListViewHolder(private val itemBinding: ListItemUserBinding) :
-        RecyclerView.ViewHolder(itemBinding.root) {
+    class UserListViewHolder(private val itemBinding: ListItemUserBinding)
+        : RecyclerView.ViewHolder(itemBinding.root) {
 
         fun bindView(user: User) {
             loadImage(itemBinding.itemListPicture, user.img)

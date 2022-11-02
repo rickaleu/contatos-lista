@@ -6,4 +6,6 @@ import kotlinx.coroutines.flow.Flow
 interface UserListRepository {
 
     fun getAllUsers(): Flow<List<User>>
+    fun getAllLocalUsers(): Flow<List<User>>
+    fun insertUser(user: User): Flow<Unit>
 }
