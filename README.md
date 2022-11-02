@@ -1,3 +1,29 @@
+# Desafio Lista de Contatos
+
+<p>
+  <img src="gif_pp.gif" align="center" width=150>
+</p>
+
+O aplicativo `Lista de Contatos` foi desenvolvido a partir do projeto default, adicionando assim, uma reestruturação e melhorias sugeridas.
+
+### Tecnologias utilizadas
+Foram utilizadas as seguintes tecnologias:
+* arquitetura de apresentação com [MVVM](https://developer.android.com/jetpack/guide?hl=pt-br)
+* Injeção de dependência com [Koin](https://insert-koin.io/)
+* Persistência de dados com [Room](https://developer.android.com/training/data-storage/room)
+* Requisições a API com [Retrofit](https://square.github.io/retrofit/)
+* Referência de navegação com [Jetpack Navigation](https://developer.android.com/guide/navigation)
+* Testes unitários com [Mockk](https://mockk.io/)
+* Programação assíncrona com [Flow](https://developer.android.com/kotlin/flow?hl=pt-br) e [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)
+* Carregamento de imagens com [Glide](https://bumptech.github.io/glide/)
+
+### Próximas etapas
+* Testes instrumentados
+* Navegação com demais telas
+* Correção de inserção de dados locais
+
+================================================================
+
 # PicPay - Desafio Android
 
 <img src="https://github.com/mobilepicpay/desafio-android/blob/master/desafio-picpay.gif" width="300"/>
